@@ -30,7 +30,7 @@ define([
 					this.stops = JSON.parse(xhr.responseText);
 				}
 			}.bind(this);
-			xhr.open('GET', '/stops.json', true);
+			xhr.open('GET', 'stops.json', true);
 			xhr.send();
 		}
 	});
