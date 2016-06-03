@@ -22,7 +22,7 @@ define([
 					this.routeData = JSON.parse(xhr.responseText);
 				}
 			}.bind(this);
-			xhr.open('GET', '/rtpi/routeinformation?routeid=' + this.$route.params.route + '&operator=bac&format=json', true);
+			xhr.open('GET', 'rtpi/routeinformation?routeid=' + this.$route.params.route + '&operator=bac&format=json', true);
 			xhr.send();
 		}
 	});

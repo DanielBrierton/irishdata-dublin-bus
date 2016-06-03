@@ -35,7 +35,7 @@ define([
 					});
 				}
 			}.bind(this);
-			xhr.open('GET', '/rtpi/routelistinformation?operator=bac', true);
+			xhr.open('GET', 'rtpi/routelistinformation?operator=bac', true);
 			xhr.send();
 		}
 	});

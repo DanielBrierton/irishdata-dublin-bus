@@ -22,7 +22,7 @@ define([
 					this.stopData = JSON.parse(xhr.responseText);
 				}
 			}.bind(this);
-			xhr.open('GET', '/rtpi/realtimebusinformation?stopid=' + this.$route.params.stop + '&format=json', true);
+			xhr.open('GET', 'rtpi/realtimebusinformation?stopid=' + this.$route.params.stop + '&format=json', true);
 			xhr.send();
 		}
 	});
