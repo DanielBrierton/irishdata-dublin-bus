@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dublin Bus</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="components/material-design-lite/material.min.css" />
+	<script type="text/javascript" src="components/material-design-lite/material.min.js"></script>
+	<script type="text/javascript" src="components/requirejs/require.js"></script>
+    <script type="text/javascript">
+        require.config({
+            baseUrl: 'js',
+            paths: {
+                'text': '../components/requirejs-text/text',
+                'vue': '../components/vue/dist/vue',
+                'vue-router': '../components/vue-router/dist/vue-router',
+                'moment': '../components/moment/moment'
+            }
+        });
+
+        require([
+            'App',
+            'vue',
+            'vue-router',
+            'main/Main',
+            'stopInfo/StopInfo',
+            'routeInfo/RouteInfo'
+        ], function (App, Vue, VueRouter, Main, StopInfo, RouteInfo) {
+        	Vue.use(VueRouter);
+        	var router = new VueRouter();
+        	router.map({
+        		'/': {
+        			component: Main
+        		},
+        		'/stop/:stop': {
+        			component: StopInfo,
+        			name: 'stop'
+        		},
+        		'/route/:route': {
+        			component: RouteInfo,
+        			name: 'route'
+        		}
+        	});
+        	router.start(App, '#app');
+        });
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <style type="text/css">
+    	.mdl-card {
+    		min-height: auto;
+    	}
+    </style>
+</head>
+<body>
+	<div id="app"></div>
+</body>
+</html>

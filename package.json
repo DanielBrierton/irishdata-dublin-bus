@@ -1,0 +1,30 @@
+{
+  "name": "irishdata-dublin-bus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node_modules/.bin/bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DanielBrierton/irishdata-dublin-bus.git"
+  },
+  "keywords": [
+    "dublin",
+    "bus",
+    "tfi",
+    "rtpi",
+    "irishdata"
+  ],
+  "author": "Daniel Brierton <daniel@brierton.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  },
+  "dependencies": {
+    "http-proxy": "^1.13.3",
+    "node-static": "^0.7.7"
+  }
+}
